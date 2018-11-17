@@ -1,0 +1,1495 @@
+
+
+@font-face {
+    font-family: "Bebas Neue Regular";
+    src: url("../fonts/BebasNeue_Regular.otf") format('opentype');
+    font-style: normal;
+}
+
+*, *::after, *::before{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: 'Rubik', sans-serif;
+}
+
+/*svg logo start---------------------*/
+.svg_logo {
+    fill: #e1433f;
+}
+
+.logo_flame{
+       transform-origin: 50% 50%;
+       transform: translate(50px, 5px);
+
+}
+.logo_text{
+    font-family: 'Quicksand', sans-serif;
+
+}
+.logo_text1{
+    font-size: 9em;
+}
+
+.logo_text2{
+    font-size: 7.8em;
+
+}
+.circle_1{
+    fill: #000000;
+}
+
+.circle_2{
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-width: 12px;
+}
+
+.circle_3{
+    fill: #ffffff;
+    stroke: #000000;
+    stroke-width: 12px;
+}
+
+.circle_4{
+    fill: #ffffff;
+}
+
+
+/*svg logo end-------------------*/
+.main_wrapper{
+
+}
+
+.header{
+    background-color: #fefeff;
+    max-height: 80px;
+    overflow: visible;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+}
+
+.header_flex_container{
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    pointer-events: none;
+}
+.logo{
+    width: 150px;
+    flex-shrink: 0;
+    margin-top: 5px;
+    z-index: 2;
+    pointer-events: auto;
+
+}
+
+.menu{
+    margin-top: 17px;
+    flex-basis: 800px ;
+}
+
+.mob_menu{
+    display: none;
+    pointer-events: auto;
+}
+
+.burger{
+    display: none;
+}
+
+.mob_menu_pop{
+    display: none;
+}
+
+.menu_list{
+    padding: 0px;
+    margin: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style-type: none;
+    font-family: "Bebas Neue Regular", Helvetica, sans-serif;
+    pointer-events: auto;
+
+}
+.menu_item{
+    margin:10px 0px;
+}
+
+.menu_item:hover{
+    transform-origin: center center;
+    transform: scale(1.05);
+}
+
+.menu_link{
+    text-decoration: none;
+    text-transform: uppercase;
+    /*color: #606060;*/
+    /*color: #5a5a5a;*/
+    color: #784f3d;
+    font-size: 23px;
+    font-weight: 400;
+    word-spacing: 5px;
+}
+
+.menu_link:hover{
+    text-decoration: none;
+    color:#608883;
+
+}
+
+
+/*header on tablet*/
+@media screen and (max-width: 1200px)  {
+    .menu_list {
+        margin: 0 20px 0px 20px;
+    }
+
+    .menu_link{
+        font-size: 20px;
+    }
+
+    .menu{
+        flex-basis: 700px ;
+        margin-top: 20px;
+    }
+
+    .logo{
+        margin-left: 20px;
+        margin-right: 20px;
+    }
+
+}
+
+/*header on mobile*/
+@media screen and (max-width: 760px){
+    .logo{
+        width: 100px;
+        margin-left: 10px;
+    }
+
+    .menu{
+        display: none;
+    }
+
+    .mob_menu{
+        display: block;
+    }
+
+    .burger{
+        display: block;
+        width: 40px;
+        margin: 19px 15px 0 10px;
+
+    }
+
+    .burger_svg{
+        fill: #784f3d;
+    }
+
+    .mob_menu_pop{
+        position: fixed;
+        min-height: 100%;
+        min-width: 100%;
+        overflow: hidden;
+        top: 0;
+        background-color: rgba(0, 0, 0, 0.88);
+        z-index: 100;
+        display: none;  /* включает попап меню*/
+        text-shadow: 1px 1px 5px black;
+    }
+
+    .mob_menu_exit_svg{
+        fill:#608883;
+    }
+
+    .menu_pop_up_exit{
+        position: absolute;
+        width: 40px;
+        margin: 19px 15px 0 10px;
+        right: 0px;
+    }
+
+    .menu_pop_up_list_wrap ul{
+       /* border: 1px solid red;*/
+        color: #FFFFFF;
+        list-style: none;
+        display: block;
+        margin: 0;
+        padding: 0;
+        margin-top: 140px;
+
+    }
+
+    .menu_pop_up_list_wrap li{
+        text-align: center;
+        margin-bottom: 25px;
+    }
+
+    .menu_pop_up_list_wrap a{
+        text-decoration: none;
+        color: #FFFFFF;
+        text-transform: uppercase;
+        font-family: "Bebas Neue Regular", Helvetica, sans-serif;
+
+        font-size: 35px;
+        word-spacing: 5px;
+        letter-spacing: 0.9px;
+
+    }
+
+    .logo_pop_menu {
+        position: absolute;
+    }
+
+}
+
+
+/* БАНЕР */
+/*----------------------------------------------------*/
+.banner{
+    background-image: url("../img/banner_bg_2.jpg");
+    width: 100%;
+    min-height: 780px;
+    background-position: center center;
+    background-size: 100% auto;
+    position: relative;
+    font-size: 30px;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.80);
+    text-shadow: 1px 1px 5px black;
+
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(44, 63, 72, 0.9);
+}
+
+.banner_wrap_horizontal{
+    /*border: 1px solid darkred;*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    position: relative;
+    margin-top: 80px;
+}
+
+.banner_wrap_vertical{
+   /*border: 1px solid #8b1878;*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 345px;
+}
+
+.banner_text{
+   /*border: 1px solid green;*/
+    text-transform: uppercase;
+    color: #ffffff;
+    font-weight: 500;
+    text-align: center;
+  line-height: 85px;
+}
+
+.banner_text p{
+margin: 0px;
+}
+
+.banner_text_1{
+    font-size: 80px;
+   /* border: 1px solid green;*/
+    position: relative;
+
+}
+
+.banner_text_2{
+    font-size: 50px;
+    word-spacing: 10px;
+    /*border: 1px solid green;*/
+}
+
+.banner_buttons{
+  /* border: 1px solid green;*/
+    margin-top: 20px;
+    margin-right: 3px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    word-spacing: 5px;
+    letter-spacing: 0.9px;
+    font-family: "Bebas Neue Regular", Helvetica, sans-serif;
+
+}
+
+.banner_button{
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 30px;
+   line-height: 38px;
+    font-weight: 400;
+    text-transform: uppercase;
+    border: 1px solid #ffffff;
+    padding: 15px 55px;
+    border-radius: 6px;
+
+}
+
+.banner_button:hover{
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.banner_button_buy{
+    margin-right: 50px;
+    background-color: rgb(120, 79, 61);
+    border: 1px solid rgb(120, 79, 61);
+
+}
+
+.banner_button_buy:hover{
+    background-color: #608883;
+    border: 1px solid #608883;
+    transition: 0.55s ease ;
+}
+
+.banner_button_info:hover{
+    background-color: #608883;
+    border: 1px solid #608883;
+    transition: 0.55s ease ;
+}
+
+@media screen and (max-width: 1366px){
+    .banner{
+        min-height: 635px;
+        background-repeat: no-repeat ;
+
+    }
+
+    .banner_wrap_horizontal{
+        margin-top: 70px;
+    }
+
+}
+
+@media screen and (max-width: 900px){
+    .banner{
+        background-repeat: no-repeat ;
+        background-size:  auto 100%;
+
+    }
+
+}
+
+/* banner on Mobile*/
+@media screen and (max-width: 760px){
+
+    .banner_wrap_horizontal{
+        margin-top: 40px;
+    }
+    .banner_text{
+        line-height: 70px;
+        margin-bottom: 10px;
+    }
+
+    .banner_text_1{
+        font-size: 50px;
+    }
+
+    .banner_text_2{
+        font-size: 30px;
+    }
+
+    .banner_buttons{
+        justify-content: center;
+        max-width: 450px ;
+    }
+
+    .banner_button{
+        margin: 0;
+        margin-bottom: 20px;
+    }
+}
+
+
+/* ПРО КОМПАНИЮ*/
+/*------------------------------------------------------*/
+.about_us{
+    position: relative;
+    background-image: url("../img/test_3.jpg");
+    width: 100%;
+    background-position: center center;
+    background-size: 100% auto;
+    z-index: -1;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.80);
+
+}
+
+.about_us::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(120, 79, 61, 0.9);*/
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.about_us_one{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+    align-items: center;
+   /*border: 2px solid red;*/
+    margin-top: 80px;
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.about_us_one_img{
+    flex-basis: 350px;
+}
+
+.about_img{
+    border: 5px solid #608883 ;
+    border-radius: 5px;
+    box-shadow: 0 0 30px rgba(0,0,0,0.8);
+
+}
+
+.about_us_one_text{
+    color: #ffffff;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+    /* border: 2px solid darkgreen;*/
+    flex-basis: 450px;
+    align-self: flex-start;
+    margin-top: 35px;
+    margin-left: 20px;
+
+}
+
+.about_us_one_text ul{
+    margin: 0px;
+    list-style: none;
+    padding: 0;
+}
+
+.about_us_one_text  li{
+position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 33px;
+    word-spacing: 4px;
+}
+
+
+.about_us_one_text  li:before {
+    content:  url("../img/log.svg");
+    position: absolute;
+    top: 0px;
+    left: -50px;
+}
+
+/*------------------------------*/
+.about_us_two{
+    display: flex;
+    max-width: 1200px;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    justify-content: space-around;
+    align-items: center;
+    /*border: 2px solid red;*/
+   /* margin-top: 50px;*/
+    position: relative;
+    flex-wrap: wrap;
+}
+
+.about_us_two_img{
+    flex-basis: 350px;
+}
+
+
+.about_us_two_text{
+    color: #ffffff;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+    /* border: 2px solid darkgreen;*/
+    flex-basis: 450px;
+    align-self: flex-start;
+    margin-top: 65px;
+    margin-left: 57px;
+
+}
+
+.about_us_two_text ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.about_us_two_text  li{
+ position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 33px;
+    word-spacing: 4px;
+}
+
+
+.about_us_two_text  li:before {
+    content:  url("../img/log.svg");
+    position: absolute;
+    top: 2px;
+    left: -50px;
+}
+
+.about_us_two_text span{
+    font-size: 35px;
+    font-weight: 400;
+}
+
+
+/*-----------------------------*/
+.about_us_three{
+    /*border: 2px solid darkred;*/
+    display: flex;
+    flex-direction: column;
+    max-width: 1200px;
+    margin: auto;
+    align-items: center;
+    margin-top: 90px;
+    margin-bottom: 70px;
+    position: relative;
+}
+
+
+
+
+.about_us_three_text{
+    color: #ffffff;
+    font-size: 25px;
+    text-shadow: 1px 1px 5px black;
+    margin-left: 100px;
+    /*border: 2px solid green;*/
+    width: 650px;
+    padding: 0;
+}
+
+.about_us_three_text ul{
+    margin: 0;
+    list-style: none;
+    padding: 0;
+}
+
+.about_us_three_text  li{
+ position: relative;
+    margin-bottom: 30px;
+    text-align: left;
+    line-height: 33px;
+    word-spacing: 4px;
+}
+
+
+.about_us_three_text  li:before {
+    content:  url("../img/log.svg");
+    position: absolute;
+    top: 2px;
+    left: -50px;
+}
+
+
+.about_us_three_img{
+    width: 600px;
+}
+
+/*Про компанию Таблетка*/
+@media screen and (max-width: 1020px) {
+    .about_us_two_img{
+        order: 1;
+    }
+    .about_us_two_text{
+        order: 2;
+    }
+
+    .about_us_one_img, .about_us_one_text, .about_us_two_text, .about_us_two_img {
+        margin: 0 0 30px 0;
+    }
+
+    .about_us_two_text, .about_us_one_text, .about_us_three_text {
+        flex-basis: 600px;
+        margin-left: 110px;
+    }
+
+    .about_us_two_text{
+        margin-bottom: 0;
+    }
+
+    .about_us_three_text{
+        flex-basis: 600px;
+        margin-left: 110px;
+        margin-bottom: 20px;
+    }
+
+    .about_us_three{
+        margin-top: 0;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+/*Про компанию Мобила*/
+@media screen and (max-width: 760px) {
+    .about_us_one_text, .about_us_two_text, .about_us_three_text {
+        margin-left: 50px;
+    }
+
+    .about_us_three{
+        padding-left: 20px;
+        padding-right: 20px;
+
+    }
+
+}
+
+
+
+/*ЦЕНЫ*/
+/*---------------------------------------*/
+.price_wrap{
+    width: 100%;
+    min-height: 560px;
+    background-color: #000000;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.80);
+}
+
+
+
+.price_title{
+    text-shadow: 1px 1px 5px black;
+    width: 200px;
+    font-family: "Bebas Neue Regular", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: #e1433f;
+    word-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    height: 70px;
+    letter-spacing: 0.9px;
+}
+
+.price_title p {
+    margin: 0;
+}
+
+.price_title:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0px;
+    width: 100px;
+    height: 2px;
+    background-color: #e1433f;
+    transform: translateX(-50%);
+}
+
+.price_cards{
+    display: flex;
+    justify-content: space-between;
+    max-width: 1200px;
+   /* border: 1px solid red;*/
+    margin: auto;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+.price{
+display:flex;
+flex: 0 0 550px ;
+border:5px solid #e1433f;
+/*border:5px solid #7c5443;*/
+min-height: 300px;
+border-radius: 5px;
+box-shadow: 0 0 30px rgba(0,0,0,0.8);
+}
+
+
+
+.price_image{
+flex-basis: 300px;
+min-width: 300px;
+/*border:1px solid green;*/
+}
+
+.price_info{
+/*border:1px solid blue;*/
+color: #ffffff;
+position: relative;
+width: 100%;
+height:100%;
+background-image: url("../img/price_info_bg.jpg");
+background-size: auto;
+background-position: center center;
+}
+
+.price_info::before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.65);
+}
+
+.price_info_inner{
+position: relative;
+padding:5px;
+/*border: 3px solid #ff75c2;*/
+width:100%;
+height:100%;
+text-shadow: 1px 1px 5px black;
+}
+
+.price_info_inner p{
+    margin: 0;
+}
+
+.title_price_bags15{
+    /*border: 1px solid red;*/
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 15px;
+}
+
+.bags_15{
+    font-size: 30px;
+}
+.bags_15_poddon{
+    font-size: 26px;
+}
+
+.price_bags15{
+    /*border: 1px solid green;*/
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: relative;
+    margin-bottom: 15px;
+}
+
+.price_bags15_price{
+    /*border: 1px solid blue;*/
+    font-size: 45px;
+    margin-left: 35px;
+}
+
+.grn{
+   /* border: 1px solid #ffc107;*/
+    font-size: 12px;
+    margin-left: 15px;
+}
+
+.title_price_bigbag{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: 20px;
+}
+.bigbag{
+    font-size: 30px;
+}
+
+.bigbag_1t{
+    font-size: 26px;
+}
+
+.price_footnote{
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px black;
+    font-style: italic;
+    font-size: 14px;
+    font-weight: lighter;
+    word-spacing: 2px;
+}
+
+/*Цены Таблетка*/
+@media screen and (max-width: 1200px)  {
+
+    .price_cards{
+        max-width: 600px;
+        justify-content: center;
+    }
+
+    .price {
+        margin: 0 50px 50px 50px;
+    }
+
+    .price_footnote{
+        margin-top: 50px;
+    }
+}
+
+/*Цены Мобилка*/
+@media screen and (max-width: 760px){
+
+    .price_title{
+        margin-top: 40px;
+    }
+
+    .price {
+        flex-direction: column;
+        flex: 0 0 330px;
+        min-height: 550px;
+    }
+
+    .price_image {
+        flex-basis: 100%;
+    }
+
+    .price_bags15{
+        justify-content: flex-start;
+    }
+
+    .price_bags15_price{
+        margin-left: 85px;
+    }
+
+    .price_footnote{
+        margin-top: 25px;
+    }
+}
+
+
+
+/*КАЧЕСТВО*/
+/*----------------------------------------------------------*/
+.quality{
+    position: relative;
+    background-color: #ffffff;
+    background-image: url("../img/test_2.jpg");
+    background-size: 100% auto;
+    min-height: 370px;
+    width: 100%;
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0,0,0,0.80);
+}
+
+.quality:before{
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.quality_title{
+    text-shadow: 1px 1px 5px black;
+    font-family: "Bebas Neue Regular", Helvetica, Arial, sans-serif;
+    font-size: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: #ffffff;
+    word-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    height: 60px;
+    letter-spacing: 0.9px;
+}
+
+.quality_title p {
+    margin: 0;
+}
+
+.quality_title:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: #ffffff;
+    transform: translateX(-50%);
+}
+
+
+
+.quality_container{
+    position: relative;
+    display: flex;
+    max-width: 1200px;
+    /*border: 1px solid red;*/
+    margin: auto;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px black;
+    justify-content: space-around;
+    margin-top: 60px;
+    flex-wrap: wrap;
+}
+
+.quality_item{
+    /*border: 1px solid green;*/
+}
+
+.ruler{
+ width: 50px;
+}
+
+.ash{
+    width: 50px;
+}
+
+.drop{
+    width: 50px;
+}
+
+.stove{
+    width: 50px;
+}
+
+.quality_img{
+    margin: auto;
+}
+
+.quality_name{
+    text-align: center;
+    font-size: 30px;
+    margin-top: 20px;
+
+}
+
+.quality_name p{
+    margin: 0;
+}
+
+.quality_value p{
+    margin: 0;
+}
+.quality_value{
+    text-align: center;
+    font-size: 26px;
+    margin-top: 20px;
+}
+
+.quality_value span{
+    font-size: 18px;
+}
+
+/*Качество Таблетка*/
+@media screen and (max-width: 1020px){
+    .quality_name{
+        font-size: 25px;
+    }
+
+    .quality_value{
+        margin-top: 14px;
+    }
+
+    .quality{
+        min-height: 340px;
+    }
+}
+
+/*Качество Мобилка*/
+@media screen and (max-width: 760px){
+    .quality_title{
+        margin-top: 40px;
+    }
+
+    .quality_title:after{
+        display: none;
+    }
+
+
+    .quality_container{
+        /*border: 1px solid red;*/
+        flex-direction: column;
+        align-items: center;
+        margin-top: 80px;
+
+    }
+
+    .quality_item>*{
+        margin: 0;
+    }
+    .quality_item{
+        margin-bottom: 50px;
+        display: flex;
+        max-width: 360px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .diametr, .ash_content, .humidity {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+
+    .stove{
+        margin-left: 10px;
+    }
+}
+
+
+
+/*КОНТАКТЫ*/
+/*--------------------------*/
+.contacts{
+    position: relative;
+    width: 100%;
+    min-height: 730px;
+    background-image: url("../img/test_3.jpg");
+    background-position: center center;
+    background-size: 100% auto;
+    box-shadow: 0 0 20px rgba(0,0,0,0.70);
+    overflow: hidden;
+
+}
+
+.contacts::before{
+   content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    /*background-color: rgba(120, 79, 61, 0.9);*/
+    /*background-color: rgba(0, 0, 0, 0.7);*/
+    background-color: rgba(44, 63, 72, 0.9);
+}
+
+
+.contacts_title{
+    text-shadow: 1px 1px 5px #000000;
+    font-family: "Bebas Neue Regular", Helvetica, Arial, sans-serif;
+    font-size: 50px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    color: #FFFFFF;
+    word-spacing: 5px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    height: 70px;
+    letter-spacing: 0.9px;
+}
+
+.contacts_title_container p {
+    margin: 0;
+}
+
+.contacts_title:after{
+    content: '';
+    display: block;
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    width: 100px;
+    height: 2px;
+    background-color: #FFFFFF;
+    transform: translateX(-50%);
+
+}
+
+.contacts_aftertitle{
+    text-shadow: 1px 1px 5px #000000;
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-size: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 16px;
+    color: #FFFFFF;
+    word-spacing: 4px;
+    text-align: center;
+    /*text-transform: uppercase;*/
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.forms_wrap{
+   /* border: 1px solid red;*/
+    position: relative;
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-around;
+
+
+}
+
+.message_form{
+    /*border: 1px solid greenyellow;*/
+    flex-basis: 400px;
+}
+
+.mes_form_block{
+    /*border: 1px solid blue;*/
+    margin: 20px 20px;
+    overflow: hidden;
+
+}
+
+.mes_form_input {
+    border: 5px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
+}
+
+
+.mes_form_area{
+    border: 5px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 10px 20px;
+    min-width: 100%;
+    max-width: 358px ;
+    min-height: 173px ;
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+
+}
+
+
+.mes_btn{
+    width: 250px;
+}
+
+
+.message_btn{
+    position: relative;
+    width: 100%;
+    min-height: 60px;
+    border-radius: 6px;
+    font-size: 26px;
+    font-family: "Bebas Neue Regular", Helvetica, sans-serif;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px black;
+    background-color: rgb(120, 79, 61);
+    border: 1px solid rgb(120, 79, 61);
+    letter-spacing: 0.9px;
+    outline: none;
+    padding-left: 45px;
+}
+
+.message_btn:hover{
+    cursor: pointer;
+    background-color: #608883;
+    border: 1px solid #608883;
+    transition: 0.55s ease ;
+    outline: none;
+}
+
+.mes_btn_img{
+    width: 35px;
+    display: block;
+    margin-right: 10px;
+    height: 35px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 45px;
+}
+
+:active, :hover, :focus {
+    outline: 0;
+    outline-offset: 0;
+}
+
+
+.call_form_wrap{
+   /* border: 1px solid greenyellow;*/
+    padding: 20px;
+}
+
+.call_form_img {
+    margin-bottom: 47px;
+    width: 280px;
+
+}
+
+.call_form_input{
+    border: 5px solid #FFFFFF;
+    border-radius: 6px;
+    padding: 10px 20px;
+    width: 100%;
+    margin-bottom: 24px;
+    font-family: Rubik, Helvetica, Arial, sans-serif;
+    font-size: 16px;
+}
+
+.call_btn{
+    width: 100%;
+    min-height: 60px;
+    border-radius: 6px;
+    font-size: 26px;
+    font-family: "Bebas Neue Regular", Helvetica, sans-serif;
+    color: #ffffff;
+    background-color: transparent;
+    border: 1px solid rgb(255, 255, 255);
+    letter-spacing: 0.9px;
+    outline: none;
+     text-shadow: 1px 1px 5px black;
+}
+
+.call_btn:hover{
+    cursor: pointer;
+    background-color: #608883;
+    border: 1px solid #608883;
+    transition: 0.55s ease ;
+    outline: none;
+}
+
+/*Цены Таблетка*/
+@media screen and (max-width: 799px){
+
+    .contacts_aftertitle{
+        font-size: 19px;
+    }
+}
+
+/*Цены Мобилка*/
+@media screen and (max-width: 760px){
+
+    .contacts_title{
+        margin-top: 40px;
+    }
+    .forms_wrap{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .message_form{
+        min-width: 280px;
+        max-width: 280px;
+    }
+    .mes_form_block{
+        margin-left: 0;
+        margin-right: 0;
+    }
+    .mes_btn{
+        width: 280px;
+    }
+
+    .call_form_wrap{
+        margin-bottom: 20px;
+    }
+}
+
+
+/*ФУТЕР*/
+/*-------------------------------------*/
+.footer{
+    width: 100%;
+    margin: auto;
+    min-height: 200px;
+    background-color: #000000;
+    overflow: hidden;
+    padding-top: 15px;
+
+}
+
+.footer_block{
+    margin: 20px;
+    text-align: center;
+    font-size: 20px;
+}
+
+.footer_link{
+    color: #e1433f;
+    text-decoration: none;
+
+}
+
+.footer_link:hover{
+    color: #e1433f;
+    text-decoration: none;
+}
+
+.footer_tel2{
+    margin-bottom: 17px;
+}
+
+.footer_email {
+    font-size: 24px;
+    margin-top: 17px;
+}
+
+
+
+/*------------------------------*/
+.pop_up_wrap{
+    position: fixed;
+    min-width: 100%;
+    min-height: 100%;
+    overflow:hidden;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 100;
+    display: none;
+}
+
+
+.pop_up{
+    background-color: #FFFFFF;
+   /* border:5px solid #608883;*/
+    border-radius: 6px;
+    font-size: 30px;
+    font-family: "Bebas Neue Regular", Helvetica, sans-serif;
+    letter-spacing: 1px;
+    color: #608883;
+    text-align: center;
+    width: 600px;
+    min-height: 250px;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pop_up p{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.pop_up_exit{
+    position: absolute;
+    right:17px;
+    top: 10px;
+    width: 25px;
+    fill:#608883;
+}
+
+.pop_up_exit:hover{
+    fill:#e1433f;
+    transition: 0.55s ease ;
+    cursor: pointer;
+}
+
+.pop_up_content{
+    position: relative;
+    top: 70px;
+    display: block;
+}
+
+/*Попап на Мобилке*/
+@media screen and (max-width: 760px){
+    .pop_up{
+        width: 340px;
+        height: 300px;
+    }
+
+    .pop_up_content p{
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

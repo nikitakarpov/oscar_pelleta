@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+{% load static %}
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>OscarPelleta</title>
+
+    <link rel="icon" href=" {% static 'MainPage/img/fav.png' %} ">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:300,400,500,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand:400,700" rel="stylesheet">
+
+    <link rel="stylesheet" href="{% static 'MainPage/css/main_custom_styles.css' %}"/>
+
+    <script src="{% static 'MainPage/js/main_js_scripts.js' %}" defer></script>
+
+</head>
+<body>
+
+<div class="main_wrapper">
+    <header class="header" id="header_id">
+        <div class="mob_menu_pop" id="mob_menu_pop">
+            <div class="logo logo_pop_menu">
+                <a class="logo_link" href="" onclick="scroll_to_banner_mob();return false;"><svg class="svg_logo" version="1.1"  xmlns="http://www.w3.org/2000/svg"
+                             viewBox="-650 -250 900 900" xml:space="preserve">
+                            <circle class="circle_4" cx="-200" cy="200" r="444"/>
+                            <circle class="circle_3" cx="-200" cy="200" r="428"/>
+                            <circle class="circle_2" cx="-200" cy="200" r="395"/>
+                            <circle class="circle_1" cx="-200" cy="200" r="380"/>
+                            <g transform="translate(-0,-120)">
+                                <g transform="matrix(-1, 0, 0, 1, 0, 0)">
+                            <path class="logo_flame" d="M89.047,287.106c0.005-0.016,0.011-0.027,0.016-0.044c2.605,2.11,5.309,4.107,8.159,5.918
+                                c-2.632-3.753-4.547-8.017-5.608-12.787c-0.228-1.012-0.5-1.996-0.642-3.057c-0.348-2.54-5.265-28.925,2.257-55.071
+                                c3.573-12.417,9.921-24.786,20.951-34.516c0,0-0.468,46.216,29.882,75.233c0,0-1.001-16.203,15.686-47.75
+                                c17.775-33.608,4.525-78.469,4.525-78.469s27.603,25.792,41.81,64.328c7.283-9.187,12.651-13.75,11.852-11.683
+                                c-5.064,13.114-2.442,22.866,1.762,32.531c4.857,11.156,11.83,22.197,11.656,38.15c-0.087,8.088-4.003,16.475-9.573,24.427
+                                c-1.664,2.377-3.465,4.705-5.379,6.978c2.241-1.327,4.378-2.736,6.402-4.237c0.005,0.016,0.011,0.027,0.016,0.044
+                                c0,0,51.399-34.081,51.725-63.86c0.326-29.779-24.323-42.43-13.418-70.681c1.012-2.616-7.859,5.385-18.02,20.005
+                                C218.942,66.933,114.708,0,114.708,0s47.527,54.603,29.942,108.923c-17.579,54.32-6.848,86.965-6.848,86.965
+                                c-30.551-41.761-14.87-109.407-14.87-109.407c-28.745,25.357-44.622,56.762-53.221,83.294
+                                c-8.686-12.847-15.893-19.657-14.952-17.209c10.905,28.251-13.745,40.902-13.418,70.681
+                                C41.672,253.02,89.047,287.106,89.047,287.106z"/></g></g>
+                                <text x="-446" y="330" class="logo_text logo_text1">OSCAR</text>
+                                <text x="-450" y="460" class="logo_text logo_text2">PELLETA</text>
+
+                        </svg></a>
+            </div>
+            <div class="menu_pop_up_exit" id="menu_pop_up_exit" onclick="menu_pop_up_exit_click()">
+                    <svg class="mob_menu_exit_svg" version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 220.176 220.176" style="enable-background:new 0 0 220.176 220.176;"
+                         xml:space="preserve">
+                        <g>
+                            <g>
+                                <path  d="M131.577,110.084l84.176-84.146c5.897-5.928,5.897-15.565,0-21.492
+                                    c-5.928-5.928-15.595-5.928-21.492,0l-84.176,84.146L25.938,4.446c-5.928-5.928-15.565-5.928-21.492,0s-5.928,15.565,0,21.492
+                                    l84.146,84.146L4.446,194.26c-5.928,5.897-5.928,15.565,0,21.492c5.928,5.897,15.565,5.897,21.492,0l84.146-84.176l84.176,84.176
+                                    c5.897,5.897,15.565,5.897,21.492,0c5.897-5.928,5.897-15.595,0-21.492L131.577,110.084z"/>
+                            </g>
+                        </g>
+                    </svg>
+            </div>
+            <div class="menu_pop_up_list_wrap">
+                <ul>
+                    <li><a href="" onclick="scroll_to_about_mob();return false;">про компанию</a></li>
+                    <li><a href="" onclick="scroll_to_price_mob();return false;">цены</a></li>
+                    <li><a href="" onclick="scroll_to_quality_mob();return false;">качество</a></li>
+                    <li><a href="" onclick="scroll_to_contacts_mob();return false;">купить</a></li>
+                    <li><a href="" onclick="scroll_to_footer_mob();return false;">контакты</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="header_flex_container">
+            <div class="logo" >
+                <a class="logo_link" href="" onclick="scroll_to_banner();return false;"><svg class="svg_logo" version="1.1"  xmlns="http://www.w3.org/2000/svg"
+                             viewBox="-650 -250 900 900" xml:space="preserve">
+                            <circle class="circle_4" cx="-200" cy="200" r="444"/>
+                            <circle class="circle_3" cx="-200" cy="200" r="428"/>
+                            <circle class="circle_2" cx="-200" cy="200" r="395"/>
+                            <circle class="circle_1" cx="-200" cy="200" r="380"/>
+                            <g transform="translate(-0,-120)">
+                                <g transform="matrix(-1, 0, 0, 1, 0, 0)">
+                            <path class="logo_flame" d="M89.047,287.106c0.005-0.016,0.011-0.027,0.016-0.044c2.605,2.11,5.309,4.107,8.159,5.918
+                                c-2.632-3.753-4.547-8.017-5.608-12.787c-0.228-1.012-0.5-1.996-0.642-3.057c-0.348-2.54-5.265-28.925,2.257-55.071
+                                c3.573-12.417,9.921-24.786,20.951-34.516c0,0-0.468,46.216,29.882,75.233c0,0-1.001-16.203,15.686-47.75
+                                c17.775-33.608,4.525-78.469,4.525-78.469s27.603,25.792,41.81,64.328c7.283-9.187,12.651-13.75,11.852-11.683
+                                c-5.064,13.114-2.442,22.866,1.762,32.531c4.857,11.156,11.83,22.197,11.656,38.15c-0.087,8.088-4.003,16.475-9.573,24.427
+                                c-1.664,2.377-3.465,4.705-5.379,6.978c2.241-1.327,4.378-2.736,6.402-4.237c0.005,0.016,0.011,0.027,0.016,0.044
+                                c0,0,51.399-34.081,51.725-63.86c0.326-29.779-24.323-42.43-13.418-70.681c1.012-2.616-7.859,5.385-18.02,20.005
+                                C218.942,66.933,114.708,0,114.708,0s47.527,54.603,29.942,108.923c-17.579,54.32-6.848,86.965-6.848,86.965
+                                c-30.551-41.761-14.87-109.407-14.87-109.407c-28.745,25.357-44.622,56.762-53.221,83.294
+                                c-8.686-12.847-15.893-19.657-14.952-17.209c10.905,28.251-13.745,40.902-13.418,70.681
+                                C41.672,253.02,89.047,287.106,89.047,287.106z"/></g></g>
+                                <text x="-446" y="330" class="logo_text logo_text1">OSCAR</text>
+                                <text x="-450" y="460" class="logo_text logo_text2">PELLETA</text>
+
+                        </svg></a>
+            </div>
+            <div class="menu">
+            <ul class="menu_list">
+                <li class="menu_item"><a class="menu_link" href="#" onclick="scroll_to_about();return false;">про компанию</a></li>
+                <li class="menu_item"><a  class="menu_link" href="" onclick="scroll_to_price();return false;">Цена</a></li>
+                <li class="menu_item"><a  class="menu_link" href="" onclick="scroll_to_quality();return false;">Качество</a></li>
+                <li class="menu_item"><a  class="menu_link" href="" onclick="scroll_to_contacts();return false;">Купить</a></li>
+                <li class="menu_item"><a  class="menu_link" href="" onclick="scroll_to_footer();return false;">Контакты</a></li>
+            </ul>
+        </div>
+            <div class="mob_menu">
+                <div class="burger" id="burger" onclick="burger_click();">
+                        <svg class="burger_svg" version="1.1" xmlns="http://www.w3.org/2000/svg"
+                             viewBox="0 0 24 24" xmlns:xlink="http://www.w3.org/1999/xlink"
+                             enable-background="new 0 0 24 24">
+                              <g>
+                                <path d="M24,3c0-0.6-0.4-1-1-1H1C0.4,2,0,2.4,0,3v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V3z"/>
+                                <path d="M24,11c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V11z"/>
+                                <path d="M24,19c0-0.6-0.4-1-1-1H1c-0.6,0-1,0.4-1,1v2c0,0.6,0.4,1,1,1h22c0.6,0,1-0.4,1-1V19z"/>
+                              </g>
+                        </svg>
+                </div>
+
+
+            </div>
+        </div>
+    </header>
+    <div class="banner" id="banner_id">
+        <div class="banner_wrap_horizontal">
+            <div class="banner_wrap_vertical">
+                <div class="banner_text">
+                    <p class="banner_text_1">пеллеты</p>
+                    <p class="banner_text_2">от производителя</p>
+                </div>
+
+                <div class="banner_buttons">
+                    <a class="banner_button banner_button_buy"  href="" onclick="scroll_to_contacts();return false;">купить сейчас</a>
+                    <a class="banner_button banner_button_info" href="" onclick="scroll_to_about();return false;">Узнать больше</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="about_us" id="about_us_id">
+        <div class="about_us_one">
+            <div class="about_us_one_img">
+                <img src="{{ top_img_url }}" alt="pelleta1" class="about_img" width="100%">
+            </div>
+            <div class="about_us_one_text">
+                <ul>
+                    <li>Поставляем топливную гранулу прямо с предприятия</li>
+                    <li>Продукция производится только из чистых опилок хвойных пород деревьев</li>
+                    <li>Никакой коры и других примесей</li>
+
+                </ul>
+            </div>
+        </div>
+        <div class="about_us_two">
+            <div class="about_us_two_text">
+                <ul>
+                    <li>Качество подтверждено сертификатом ДСТУ ISO/IEC</li>
+                    <li>Диаметр пеллет <span>6</span> мм и <span>8</span> мм</li>
+                </ul>
+            </div>
+            <div class="about_us_two_img">
+                <img src="{{middle_img_url}}" alt="pelleta2" class="about_img" width="100%">
+            </div>
+        </div>
+        <div class="about_us_three">
+
+            <div class="about_us_three_text">
+                <ul>
+                    <li>Доставка  осуществляется в «биг-бэгах»  по 1 т или в полиэтиленовых мешках по 15 кг на поддоне.</li>
+                </ul>
+            </div>
+            <div class="about_us_three_img">
+                <img src="{{bottom_img_url}}" alt="pelleta3" class="about_img" width="100%">
+            </div>
+        </div>
+
+    </div>
+    <div class="price_wrap" id="price_wrap_id">
+        <div class="price_title">
+            <p>наши цены</p>
+        </div>
+        <div class="price_cards">
+            <div class="price">
+                <div class="price_image">
+                     <img src="{{poddon_img_url}}" alt="poddon" width="100%" height="100%">
+                </div>
+                <div class="price_info">
+                    <div class="price_info_inner">
+                        <div class="title_price_bags15">
+                            <p class="bags_15">Мешки по 15 кг</p>
+                            <p class="bags_15_poddon">на поддоне</p>
+                            <p class="1ton">(1 тонна)</p>
+                        </div>
+                        <div class="price_bags15">
+                            <div class="price_bags15_price">
+                                <p>{{poddon_no_nds}}</p>
+                            </div>
+                            <div class="grn">
+                                <p class="grn_grn">ГРН</p>
+                                <p class="grn_pdv">без НДС</p>
+                            </div>
+                        </div>
+                        <div class="price_bags15">
+                            <div class="price_bags15_price">
+                                <p>{{poddon_nds}}</p>
+                            </div>
+                            <div class="grn">
+                                <p class="grn_grn">ГРН</p>
+                                <p class="grn_pdv">c НДС</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            <div class="price" >
+            <div class="price_image">
+                 <img src="{{bigbag_img_url}}" alt="big_bag" width="100%" height="100%">
+            </div>
+            <div class="price_info">
+           <div class="price_info_inner">
+               <div class="title_price_bigbag">
+                   <p class="bigbag">Мешки Big-Bag</p>
+                   <p class="bigbag_1t">по 1 тонне</p>
+               </div>
+               <div class="price_bags15">
+                            <div class="price_bags15_price">
+                                <p>{{bigbag_no_nds}}</p>
+                            </div>
+                            <div class="grn">
+                                <p class="grn_grn">ГРН</p>
+                                <p class="grn_pdv">без НДС</p>
+                            </div>
+                        </div>
+               <div class="price_bags15">
+                            <div class="price_bags15_price">
+                                <p>{{bigbag_nds}}</p>
+                            </div>
+                            <div class="grn">
+                                <p class="grn_grn">ГРН</p>
+                                <p class="grn_pdv">c НДС</p>
+                            </div>
+                        </div>
+           </div>
+       </div>
+        </div>
+        </div>
+        <p class="price_footnote"><sup>*</sup> Цены указаны со склада в Киеве</p>
+    </div>
+    <div class="quality" id="quality_id">
+        <div class="quality_title">
+            <p>Сертифицированное Качество</p>
+        </div>
+        <div class="quality_container">
+            <div class="quality_item">
+                <div class="quality_img ruler">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                         version="1.1" id="Layer_1" x="0px" y="0px"
+                         viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                         xml:space="preserve" >
+                        <g>
+                            <g>
+                                <path d="M355.876,366.151h36.597V335.73h-48.781l-52.019-129.878c14.082-10.765,23.19-27.724,23.19-46.778    c0-27.198-18.546-50.136-43.653-56.859V90.067h20.651V0h-71.722v90.067h20.651v12.147c-25.107,6.723-43.653,29.661-43.653,56.859    c0,19.054,9.107,36.014,23.19,46.778l-52.019,129.878h-48.78v30.421h36.597l-53.886,134.539l28.24,11.31l58.417-145.85h51.897    v31.134h30.421v-31.134h51.897L381.523,512l28.24-11.31L355.876,366.151z M261.438,30.421v29.226h-10.88V30.421H261.438z     M255.998,130.631c15.683,0,28.442,12.759,28.442,28.442c0,15.683-12.759,28.442-28.442,28.442    c-15.683,0-28.442-12.759-28.442-28.442C227.556,143.391,240.315,130.631,255.998,130.631z M271.208,335.73v-31.135h-30.421    v31.135h-39.712l47.379-118.294c2.472,0.317,4.986,0.5,7.543,0.5c2.557,0,5.071-0.183,7.542-0.5l47.38,118.294H271.208z" fill="#FFFFFF"/>
+                            </g>
+                        </g>
+                    </svg>
+                </div>
+                <div class="quality_name diametr">
+                    <p>Диаметр</p>
+                </div>
+                <div class="quality_value diametr">
+                    <p>{{diameter}} <span>мм</span></p>
+                </div>
+            </div>
+            <div class="quality_item">
+                <div class="quality_img ash">
+                   <svg xmlns="http://www.w3.org/2000/svg"
+                        xmlns:xlink="http://www.w3.org/1999/xlink"
+                        version="1.1" id="Capa_1" x="0px" y="0px"
+                        viewBox="0 0 541.314 541.314"
+                        style="enable-background:new 0 0 541.314 541.314;"
+                        xml:space="preserve">
+                        <g>
+                            <g id="iconos_7_">
+                                <polygon points="433.497,312.025 397.063,368.51 372.938,358.776 288.864,512.129 387.635,512.129 430.915,454.754     468.075,454.754 507.836,512.129 541.314,512.129 464.68,320.478   " fill="#FFFFFF"/>
+                                <polygon points="463.073,464.317 435.687,464.317 399.617,512.129 496.208,512.129   " fill="#FFFFFF"/>
+                                <path d="M38.384,420.339l-28.41,91.79h39.445l31.556-91.418l9.008-71.145h30.055l27.043,73.727l-16.524,88.836h38.279    l18.819-100.616l-18.819-53.034l-6.837-23.992l103.562,58.676l-19.431,33.736l45.125,26l47.735-82.858l-45.125-26.001    l-18.752,32.551L154.53,308.276l-6.502-22.835l11.829-47.918l5.097,43.797l8.186,21.257l32.302,18.886l-13.397-47.602    l-10.356-91.456l-33.469-1.377l-5.881-16.18c22.424-4.581,39.302-23.906,40.545-47.373l-100.75-13.359    c-0.736,3.442-1.157,7.009-1.157,10.672c0,17.681,8.989,33.258,22.644,42.429l-0.889-0.096l-20.167,16.954l-25.838-2.17L0,221.497    v75.477l45.059,11.131L38.384,420.339z M28.688,269.558v-22.539l19.125-17.471v44.313L28.688,269.558z" fill="#FFFFFF"/>
+                                <path d="M182.443,107.77l15.31,2.027c2.037-45.508-17.738-75.286-53.541-80.029c-2.936-0.392-5.843-0.583-8.721-0.583    c-31.709,0-54.784,23.208-63.82,63.896l13.34,1.769L182.443,107.77z" fill="#FFFFFF"/>
+                            </g>
+                        </g>
+                   </svg>
+                </div>
+                <div class="quality_name ash_content">
+                    <p>Зольность</p>
+                </div>
+                <div class="quality_value ash_content">
+                    <p><span>до</span> {{ash_content}} <span>%</span></p>
+                </div>
+            </div>
+            <div class="quality_item">
+                <div class="quality_img drop">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                           xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                           id="Layer_1" x="0px" y="0px" viewBox="0 0 512 512"
+                           style="enable-background:new 0 0 512 512;"
+                           xml:space="preserve" >
+                        <g>
+                            <g>
+                                <g>
+                                    <path d="M291.273,220.481c-0.122-0.326-0.263-0.645-0.423-0.953l-20.002-38.549c-2.188-4.218-7.38-5.866-11.604-3.675     c-4.22,2.188-5.865,7.384-3.675,11.604l19.757,38.078c10.501,28.5,9.348,59.39-3.264,87.039     c-12.683,27.804-35.439,49.005-64.071,59.699c-11.642,4.348-23.844,6.758-36.269,7.166c-12.425-0.408-24.627-2.818-36.271-7.166     c-28.632-10.693-51.386-31.894-64.07-59.699c-12.612-27.649-13.766-58.54-3.262-87.039L171.721,27.298L241.919,162.6     c2.19,4.219,7.383,5.865,11.605,3.677c4.22-2.19,5.865-7.385,3.677-11.605L179.363,4.643C177.882,1.79,174.935,0,171.721,0     c-3.215,0-6.161,1.79-7.641,4.643L52.591,219.528c-0.159,0.309-0.3,0.627-0.422,0.953c-12.303,32.94-11.044,68.698,3.55,100.688     c14.592,31.988,40.769,56.38,73.709,68.681c13.491,5.039,27.633,7.816,42.031,8.255c0.087,0.003,0.175,0.004,0.263,0.004     c0.087,0,0.175-0.001,0.261-0.004c14.399-0.439,28.541-3.216,42.03-8.255c32.94-12.301,59.118-36.693,73.71-68.681     C302.316,289.182,303.577,253.423,291.273,220.481z" fill="#FFFFFF"/>
+                                    <path d="M463.842,278.136c-0.122-0.326-0.264-0.645-0.423-0.953l-19.609-37.795c-2.188-4.218-7.381-5.864-11.605-3.677     c-4.22,2.19-5.865,7.385-3.677,11.605l19.36,37.314c9.705,26.766-3.997,56.52-30.726,66.501     c-5.254,1.961-10.755,3.056-16.357,3.256c-5.602-0.199-11.105-1.294-16.358-3.255c-13.027-4.864-23.378-14.51-29.147-27.159     c-5.7-12.496-6.256-26.448-1.577-39.342l47.082-90.747l15.599,30.066c2.191,4.22,7.384,5.865,11.605,3.677     c4.22-2.19,5.865-7.385,3.676-11.605l-23.24-44.793c-1.48-2.852-4.427-4.643-7.641-4.643c-3.215,0-6.161,1.79-7.641,4.643     l-54.972,105.954c-0.16,0.309-0.301,0.627-0.423,0.953c-6.474,17.333-5.811,36.149,1.867,52.982     c7.679,16.833,21.454,29.667,38.789,36.142c7.1,2.65,14.541,4.111,22.116,4.343c0.088,0.003,0.176,0.004,0.264,0.004     c0.088,0,0.175-0.001,0.267-0.005c7.574-0.231,15.014-1.692,22.115-4.344C458.965,353.897,477.204,313.917,463.842,278.136z" fill="#FFFFFF"/>
+                                    <path d="M353.97,444.884l-36.629-70.601c-1.48-2.852-4.427-4.643-7.641-4.643c-3.215,0-6.161,1.79-7.64,4.643l-36.633,70.601     c-0.161,0.309-0.303,0.627-0.425,0.954c-9.455,25.326,3.455,53.625,28.782,63.084c5.025,1.874,10.29,2.908,15.651,3.073     c0.088,0.003,0.176,0.004,0.265,0.004c0.088,0,0.176-0.001,0.266-0.004c5.357-0.165,10.622-1.199,15.652-3.074     c25.325-9.459,38.234-37.758,28.775-63.084C354.271,445.512,354.129,445.193,353.97,444.884z M319.596,492.793     c-3.182,1.187-6.512,1.855-9.898,1.987c-3.389-0.132-6.718-0.799-9.896-1.985c-16.279-6.08-24.652-24.157-18.842-40.473     l28.738-55.383l28.733,55.383C344.243,468.637,335.871,486.714,319.596,492.793z" fill="#FFFFFF"/>
+                                </g>
+                            </g>
+                        </g>
+                      </svg>
+                  </div>
+                <div class="quality_name humidity">
+                    <p>Влажность</p>
+                </div>
+                <div class="quality_value humidity">
+                    <p>{{humidity}} <span>%</span></p>
+                </div>
+            </div>
+            <div class="quality_item">
+                <div class="quality_img stove">
+                      <svg xmlns="http://www.w3.org/2000/svg"
+                           xmlns:xlink="http://www.w3.org/1999/xlink"
+                           version="1.1" id="Capa_1" x="0px" y="0px"
+                           viewBox="0 0 470 470" style="enable-background:new 0 0 470 470;"
+                           xml:space="preserve">
+                            <g>
+                                <path d="M404.233,69.506H288.825v-16.51c1.819-1.369,3-3.539,3-5.99s-1.181-4.621-3-5.99V7.5c0-4.142-3.357-7.5-7.5-7.5h-92.65   c-4.143,0-7.5,3.358-7.5,7.5v33.516c-1.819,1.369-3,3.539-3,5.99s1.181,4.621,3,5.99v16.51H65.767c-4.143,0-7.5,3.358-7.5,7.5   s3.357,7.5,7.5,7.5h12.656v312.217h-2.578c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5h13.561V462.5c0,4.142,3.357,7.5,7.5,7.5   s7.5-3.358,7.5-7.5v-50.777h261.189V462.5c0,4.142,3.357,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-50.777h13.561c4.143,0,7.5-3.358,7.5-7.5   s-3.357-7.5-7.5-7.5h-2.578V84.506h12.656c4.143,0,7.5-3.358,7.5-7.5S408.376,69.506,404.233,69.506z M196.175,54.506h12.5   c4.143,0,7.5-3.358,7.5-7.5s-3.357-7.5-7.5-7.5h-12.5V15h77.65v24.506h-35.15c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5h35.15   v15h-77.65V54.506z M93.423,396.723v-61.876h283.154v61.876H93.423z M376.577,319.847H93.423V84.506h283.154V319.847z" fill="#FFFFFF"/>
+                                <path d="M281.325,357.567h-92.65c-4.143,0-7.5,3.358-7.5,7.5s3.357,7.5,7.5,7.5h92.65c4.143,0,7.5-3.358,7.5-7.5   S285.468,357.567,281.325,357.567z" fill="#FFFFFF"/>
+                                <path d="M264.371,261.396c-3.297,2.506-3.938,7.212-1.432,10.509c2.506,3.297,7.211,3.94,10.51,1.432   c15.651-11.897,24.899-31.48,24.738-52.383c-0.257-33.155-23.798-62.823-24.8-64.07c-1.475-1.835-3.764-2.872-6.077-2.798   c-2.354,0.073-4.535,1.246-5.894,3.168c0,0-1.053,1.49-2.493,3.527c-4.09-9.186-10.237-20.444-18.542-29   c-1.412-1.455-3.354-2.276-5.381-2.276c-2.028,0-3.97,0.821-5.382,2.275c-8.309,8.557-14.457,19.817-18.546,29.004   c-1.442-2.04-2.498-3.532-2.498-3.532c-1.359-1.922-3.542-3.094-5.895-3.167c-2.329-0.075-4.602,0.965-6.076,2.799   c-1.002,1.247-24.534,30.915-24.791,64.069c-0.163,21.029,9.173,40.679,24.974,52.563c1.351,1.016,2.933,1.506,4.502,1.506   c2.276,0,4.526-1.033,6-2.992c2.489-3.311,1.824-8.013-1.486-10.502c-12.017-9.038-19.116-24.163-18.989-40.458   c0.143-18.418,9.392-36.311,15.707-46.402l2.709,3.83c2.427,3.428,3.891,5.497,7.773,5.497c3.12,0,5.914-1.932,7.017-4.851   c0.024-0.066,0.093-0.255,0.195-0.562c1.549-4.632,6.619-18.596,14.784-29.881c8.164,11.287,13.237,25.251,14.788,29.884   c0.103,0.304,0.17,0.493,0.194,0.559c1.103,2.919,3.896,4.851,7.017,4.851c3.884,0,5.348-2.07,7.773-5.499l2.705-3.825   c6.318,10.093,15.568,27.984,15.711,46.4C283.313,237.27,276.279,252.345,264.371,261.396z" fill="#FFFFFF"/>
+                                <path d="M354.077,179.506c-4.143,0-7.5,3.358-7.5,7.5v60.341c0,4.142,3.357,7.5,7.5,7.5s7.5-3.358,7.5-7.5v-60.341   C361.577,182.864,358.22,179.506,354.077,179.506z" fill="#FFFFFF"/>
+                                <path d="M111.948,130.646c-2.193,1.371-3.525,3.774-3.525,6.36v160.341c0,4.142,3.357,7.5,7.5,7.5h238.154   c4.143,0,7.5-3.358,7.5-7.5v-20c0-4.142-3.357-7.5-7.5-7.5s-7.5,3.358-7.5,7.5v12.5H123.423V141.36   c12.067-6.546,54.142-26.854,111.577-26.854c57.243,0,99.479,20.327,111.577,26.864v15.636c0,4.142,3.357,7.5,7.5,7.5   s7.5-3.358,7.5-7.5v-20c0-2.586-1.332-4.99-3.525-6.36c-2.035-1.271-50.669-31.14-123.052-31.14S113.983,129.374,111.948,130.646z" fill="#FFFFFF"/>
+                            </g>
+                      </svg>
+                  </div>
+                <div class="quality_name calorific_value">
+                    <p>Теплота Cгорания </p>
+                </div>
+                <div class="quality_value calorific_value">
+                    <p>{{temperature}} <span>МДЖ/кг</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="contacts" id="contacts_id">
+        <div class="contacts_title_container">
+            <div class="contacts_title">
+                <p>Оставте заявку {{form_name}}</p>
+            </div>
+            <div class="contacts_aftertitle">
+                <p>Или закажите обратный звонок и мы свяжемся с Вами в ближайшее время</p>
+            </div>
+        </div>
+        <div class="forms_wrap">
+           <div class="message_form">
+               <form class="mes_form" action="" method="POST">{% csrf_token %}
+                   <div class="mes_form_block  name">
+                      <!-- <input class="mes_form_input" type="text" name="name" id="name"  placeholder="Ф.И.О." required>-->
+                        {{ message_form.name }}
+                   </div>
+                   <div class="mes_form_block phone">
+                       <!--<input class="mes_form_input" type="tel" name="phone_name" id="phone" placeholder="+38 (___) ___-__-__" required>-->
+                        {{ message_form.telephone }}
+                   </div>
+                   <div class="mes_form_block email">
+                      <!-- <input class="mes_form_input" type="email" name="email" id="email" placeholder="Example@email.com">-->
+                       {{ message_form.email }}
+                   </div>
+                   <div class="mes_form_block text_mes">
+                     <!--  <textarea class="mes_form_area"   name="text_message" id="text_message" placeholder="Ваше сообщение:" required></textarea> -->
+                       {{ message_form.text_message }}
+                   </div>
+                   <div class="mes_form_block mes_btn">
+                       <button class="message_btn" id="message_btn_id">
+                           <div class="mes_btn_img">
+                               <svg xmlns="http://www.w3.org/2000/svg"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                    id="Capa_1" x="0px" y="0px"
+                                    viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;"
+                                    xml:space="preserve" >
+                                    <g>
+                                        <g>
+                                            <path d="M467,61H45C20.218,61,0,81.196,0,106v300c0,24.72,20.128,45,45,45h422c24.72,0,45-20.128,45-45V106    C512,81.28,491.872,61,467,61z M460.786,91L256.954,294.833L51.359,91H460.786z M30,399.788V112.069l144.479,143.24L30,399.788z     M51.213,421l144.57-144.57l50.657,50.222c5.864,5.814,15.327,5.795,21.167-0.046L317,277.213L460.787,421H51.213z M482,399.787    L338.213,256L482,112.212V399.787z" fill="#FFFFFF"/>
+                                        </g>
+                                    </g>
+                               </svg>
+                           </div>
+                           Отправить
+                       </button>
+                   </div>
+               </form>
+           </div>
+           <div class="call_form_wrap">
+               <div class="call_form_img">
+                    <svg xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                         id="Capa_1" x="0px" y="0px" viewBox="0 0 60 60"
+                         style="enable-background:new 0 0 60 60;" xml:space="preserve" >
+                        <g>
+                            <path d="M42.595,0H17.405C14.977,0,13,1.977,13,4.405v51.189C13,58.023,14.977,60,17.405,60h25.189C45.023,60,47,58.023,47,55.595   V4.405C47,1.977,45.023,0,42.595,0z M15,8h30v38H15V8z M17.405,2h25.189C43.921,2,45,3.079,45,4.405V6H15V4.405   C15,3.079,16.079,2,17.405,2z M42.595,58H17.405C16.079,58,15,56.921,15,55.595V48h30v7.595C45,56.921,43.921,58,42.595,58z" fill="#FFFFFF"/>
+                            <path d="M30,49c-2.206,0-4,1.794-4,4s1.794,4,4,4s4-1.794,4-4S32.206,49,30,49z M30,55c-1.103,0-2-0.897-2-2s0.897-2,2-2   s2,0.897,2,2S31.103,55,30,55z" fill="#FFFFFF"/>
+                            <path d="M26,5h4c0.553,0,1-0.447,1-1s-0.447-1-1-1h-4c-0.553,0-1,0.447-1,1S25.447,5,26,5z" fill="#FFFFFF"/>
+                            <path d="M33,5h1c0.553,0,1-0.447,1-1s-0.447-1-1-1h-1c-0.553,0-1,0.447-1,1S32.447,5,33,5z" fill="#FFFFFF"/>
+                            <path d="M56.612,4.569c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c3.736,3.736,3.736,9.815,0,13.552   c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293   C61.128,16.434,61.128,9.085,56.612,4.569z" fill="#FFFFFF"/>
+                            <path d="M52.401,6.845c-0.391-0.391-1.023-0.391-1.414,0s-0.391,1.023,0,1.414c1.237,1.237,1.918,2.885,1.918,4.639   s-0.681,3.401-1.918,4.638c-0.391,0.391-0.391,1.023,0,1.414c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293   c1.615-1.614,2.504-3.764,2.504-6.052S54.017,8.459,52.401,6.845z" fill="#FFFFFF"/>
+                            <path d="M4.802,5.983c0.391-0.391,0.391-1.023,0-1.414s-1.023-0.391-1.414,0c-4.516,4.516-4.516,11.864,0,16.38   c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414   C1.065,15.799,1.065,9.72,4.802,5.983z" fill="#FFFFFF"/>
+                            <path d="M9.013,6.569c-0.391-0.391-1.023-0.391-1.414,0c-1.615,1.614-2.504,3.764-2.504,6.052s0.889,4.438,2.504,6.053   c0.195,0.195,0.451,0.293,0.707,0.293s0.512-0.098,0.707-0.293c0.391-0.391,0.391-1.023,0-1.414   c-1.237-1.237-1.918-2.885-1.918-4.639S7.775,9.22,9.013,7.983C9.403,7.593,9.403,6.96,9.013,6.569z" fill="#FFFFFF"/>
+                        </g>
+                    </svg>
+               </div>
+               <form class="call_form" action="recall" method="GET">
+                   <div class="call_form_tel">
+                       <input class="call_form_input tel" type="text" name="telephone" id="call_phone" placeholder="+38 (___) ___-__-__" required>
+                   </div>
+                   <div class="call_form_btn">
+                        <button class="call_btn" id="call_btn_id">
+                            <div class="call_btn_img">
+
+                            </div>
+                            перезвоните мне
+                        </button>
+                   </div>
+               </form>
+           </div>
+        </div>
+    </div>
+    <footer class="footer" id="footer_id">
+        <p class="footer_block"><a class="footer_link" href="tel: {{raw_tel_1}}">{{format_tel_1}}</a></p>
+        <p class="footer_block footer_tel2"><a class="footer_link" href="tel: {{raw_tel_2}}">{{format_tel_2}}</a></p>
+        <p class="footer_block footer_email"><a class="footer_link" href="mailto:{{footer_email}}">{{footer_email}}</a></p>
+    </footer>
+    <div class="pop_up_wrap" id="pop_up_wrap_id">
+        <div class="pop_up">
+            <div class="pop_up_exit" >
+                <a class="exit_link" id="pop_up_exit_id">
+                    <svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg"
+                         xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+                         viewBox="0 0 220.176 220.176" style="enable-background:new 0 0 220.176 220.176;"
+                         xml:space="preserve">
+                        <g>
+                            <g>
+                                <path  d="M131.577,110.084l84.176-84.146c5.897-5.928,5.897-15.565,0-21.492
+                                    c-5.928-5.928-15.595-5.928-21.492,0l-84.176,84.146L25.938,4.446c-5.928-5.928-15.565-5.928-21.492,0s-5.928,15.565,0,21.492
+                                    l84.146,84.146L4.446,194.26c-5.928,5.897-5.928,15.565,0,21.492c5.928,5.897,15.565,5.897,21.492,0l84.146-84.176l84.176,84.176
+                                    c5.897,5.897,15.565,5.897,21.492,0c5.897-5.928,5.897-15.595,0-21.492L131.577,110.084z"/>
+                            </g>
+                        </g>
+                    </svg>
+               </a>
+            </div>
+            <div class="pop_up_content">
+                <p>Ваша заявка успешно отправлена!</p>
+                <p>Мы свяжемся с вами в ближайшее время.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
