@@ -5,7 +5,7 @@ import datetime
 
 
 #https://api.telegram.org/bot<token>/METHOD_NAME
-token='677673622:AAGHMdCWJOeauHDOir849tKw1OPDVdpULPU/'
+token=
 bot_url='https://api.telegram.org/bot'+token
 
 def daytime_valid():
